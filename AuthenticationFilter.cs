@@ -4,7 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Web;
 using System.Web.Http.Controllers;
-using System.Web.Http.Filters;.
+using System.Web.Http.Filters;
+
+//1. Create a new class for your filter that inherits from System.Web.Http.Filters.ActionFilterAttribute
+//2. Check for an authorization header
+//3. Get the user id and password from the header
+//4. Perform your authentication check
+//5. Return a 401 if not authorized
+
+//In your controller class decorate the class with the Authentication class name you created to perform the authentication. In
+//this case decorate with [AuthenticationFilter].
 
 namespace WebApiSecurity
 {
